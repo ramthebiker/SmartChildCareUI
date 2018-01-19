@@ -1,0 +1,51 @@
+
+
+<form>
+        <div class="container-fluid"> 
+      <div class="jumbotron jumbotron-fluid">
+       <div class="container">
+   <div class="form-row align-items-center">
+    <div class="col-sm-3 my-1">
+      <input type="text" class="form-control" placeholder="Search Child Record" aria-describedby="basic-addon1" #searchTxt>
+      
+    </div>
+
+  
+
+   
+  
+  
+    <div class="col-auto my-1">
+      <button type="submit" class="btn btn-primary" (click)="Search(searchTxt)">Search</button>
+    </div>
+  </div>
+      </div>
+    </div>
+    </div>
+  
+
+ 
+</form>
+
+ <div class="table-responsive"> 
+       <table class="table table-hover">
+             <thead>
+    <tr>
+        <th >#</th>
+      <th >FirstName</th>
+      <th >LastName</th>
+       <th >MotherName</th>
+      <th >DateOfBirth</th>
+      <th ></th>
+    </tr>
+  </thead>
+  <tr *ngFor="let data of dataList" >
+       <td>{{ data.BabyID }}</td>
+    <td>{{ data.FirstName }}</td>
+    <td>{{ data.LastName }}</td>
+     <td>{{ data.MotherName }}</td>
+     <td>{{ data.DOB }}</td>
+     <td><button type="button" class="btn btn-outline-success btn-sm">Select</button></td>
+  </tr>
+</table>
+  </div>
